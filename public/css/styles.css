@@ -18334,7 +18334,7 @@ input:focus {
 
 /* Backgrounds  */
 .bg-gradient-primary {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: linear-gradient(to right, #F7971E, #FFD200);
 }
 
 .bg-gradient-secondary {
@@ -19063,7 +19063,7 @@ input:focus {
 }
 
 .navbar.horizontal-boxed-layout-navbar .navbar-middle .nav-pills .nav-item .nav-link.active {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: linear-gradient(to right, #F7971E, #FFD200);
   box-shadow: 0px 3px 8.3px 0.7px rgba(163, 93, 255, 0.35);
   color: #ffffff;
   border: 0;
@@ -19079,10 +19079,10 @@ input:focus {
   }
 }
 
-.navbar.horizontal-boxed-layout-navbar .navbar-bottom {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
-  box-shadow: 0px 3px 8.3px 0.7px rgba(163, 93, 255, 0.35);
-  padding: .5rem 1rem;
+.navbar.horizontal-box/.navbar-bottom {
+  background: linear-g/ #F7971E, #FFD200);
+  box-shadow: 0px 3px /163, 93, 255, 0.35);
+  padding: .5rem 1rem;/
   border-radius: 6px;
 }
 
@@ -19898,11 +19898,11 @@ code {
 
 .purchase-popup .btn.purchase-button {
   background-color: rgba(172, 50, 228, 0.9);
-  background-image: -owg-linear-gradient(to right, #da8cff, #9a55ff);
-  background-image: -webkit-linear-gradient(to right, #da8cff, #9a55ff);
-  background-image: -moz-linear-gradient(to right, #da8cff, #9a55ff);
-  background-image: -o-linear-gradient(to right, #da8cff, #9a55ff);
-  background-image: linear-gradient(to right, #da8cff, #9a55ff);
+  background-image: -owg-linear-gradient(to right, #F7971E, #FFD200);
+  background-image: -webkit-linear-gradient(to right, #F7971E, #FFD200);
+  background-image: -moz-linear-gradient(to right, #F7971E, #FFD200);
+  background-image: -o-linear-gradient(to right, #F7971E, #FFD200);
+  background-image: linear-gradient(to right, #F7971E, #FFD200);
   color: #ffffff;
   border: none;
   line-height: 1;
@@ -19984,7 +19984,7 @@ code {
 
 /*Badge gradient variations*/
 .badge-gradient-primary {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: linear-gradient(to right, #F7971E, #FFD200);
   color: #ffffff;
 }
 
@@ -20516,7 +20516,7 @@ code {
 }
 
 .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: linear-gradient(to right, #F7971E, #FFD200);
   color: #ffffff;
 }
 
@@ -20872,7 +20872,7 @@ code {
 
 /* gradient buttons */
 .btn-gradient-primary {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: linear-gradient(to right, #F7971E, #FFD200);
   border: 0;
   -webkit-transition: opacity 0.3s ease;
   -moz-transition: opacity 0.3s ease;
@@ -20883,7 +20883,7 @@ code {
 
 .btn-gradient-primary:not([disabled]):not(.disabled):active, .btn-gradient-primary:not([disabled]):not(.disabled).active,
 .show > .btn-gradient-primary.dropdown-toggle {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: linear-gradient(to right, #F7971E, #FFD200);
 }
 
 .btn-gradient-primary:hover {
@@ -21298,7 +21298,7 @@ code {
 }
 
 .form-check .form-check-label input[type="checkbox"]:checked + .input-helper:before {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: linear-gradient(to right, #F7971E, #FFD200);
   border-width: 0;
 }
 
@@ -21376,7 +21376,7 @@ code {
 }
 
 .form-check .form-check-label input[type="radio"]:checked + .input-helper:before {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: linear-gradient(to right, #F7971E, #FFD200);
   border-width: 0;
 }
 
@@ -21409,7 +21409,7 @@ code {
 
 .form-check-primary.form-check label input[type="checkbox"]:checked + .input-helper:before,
 .form-check-primary.form-check label input[type="radio"]:checked + .input-helper:before {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: linear-gradient(to right, #F7971E, #FFD200);
 }
 
 .form-check-secondary.form-check label input[type="checkbox"] + .input-helper:before,
@@ -21766,7 +21766,7 @@ dl li {
 }
 
 .gradient-bullet-list li:nth-child(5):before {
-  background: linear-gradient(to right, #da8cff, #9a55ff);
+  background: linear-gradient(to right, #F7971E, #FFD200);
 }
 
 /* Preview */

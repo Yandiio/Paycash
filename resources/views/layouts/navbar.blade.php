@@ -27,8 +27,8 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo" href="index.html"><img src="{{asset('images/logo.svg')}}" alt="logo" /></a>
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo" /></a>
+            <a class="navbar-brand brand-logo" href="{{url('home')}}"><img src="{{asset('images/Paycash.png')}}" alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
             <div class="search-field d-none d-md-block">
@@ -242,40 +242,19 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false"
-                        aria-controls="general-pages">
-                        <span class="menu-title">Menu Transaksi</span>
-                        <i class="menu-arrow"></i>
-                        <i class="mdi mdi-margin menu-icon"></i>
-                    </a>
-                    <div class="collapse" id="general-pages">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page
-                                </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#general-s" aria-expanded="false"
                         aria-controls="general-s">
                         <span class="menu-title">Manage Data</span>
                         <i class="menu-arrow"></i>
-                        <i class="mdi mdi-file-document-box menu-icon"></i>
+                        <i class="mdi mdi-database menu-icon"></i>
                     </a>
                     <div class="collapse" id="general-s">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="#"> Blank Page
+                            <li class="nav-item"> <a class="nav-link" href="{{url('kelas')}}"> Data Kelas
                                 </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#"> Login </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#"> Register </a>
+                            <li class="nav-item"> <a class="nav-link" href="{{url('jurusan')}}"> Data Jurusan </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{url('siswa')}}"> Data Siswa </a>
                             </li>
-                            <li class="nav-item"> <a class="nav-link" href="#"> 404 </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#"> 500 </a></li>
                         </ul>
                     </div>
                 </li>
@@ -288,8 +267,8 @@
                     </a>
                     <div class="collapse" id="general">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" href="">Histori Pembayaran</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="">Rekap Data</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{url('history')}}">Histori Pembayaran</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="{{url('recap')}}">Rekap Data</a></li>
                         </ul>
                     </div>
                 </li>
@@ -297,6 +276,12 @@
                     <a class="nav-link" href="pages/icons/mdi.html">
                         <span class="menu-title">Pengaturan User</span>
                         <i class="mdi mdi-account-settings-variant menu-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/icons/mdi.html">
+                        <span class="menu-title">Tentang</span>
+                        <i class="mdi mdi-information-outline menu-icon"></i>
                     </a>
                 </li>
                   

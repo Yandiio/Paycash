@@ -24,5 +24,22 @@ Route::get('/pembayaran',function(){
 Route::get('/mutasi',function(){
     return view ('Admin.mutasi');
 });
+Route::get('/siswa',function(){
+    return view ('datamanager.siswa');
+});
+Route::get('/jurusan',function(){
+    return view ('datamanager.jurusan');
+});
+Route::get('/kelas',function(){
+    return view ('datamanager.kelas');
+});
+Route::get('/history',function(){
+    return view ('laporan.history');
+});
+Route::get('/recap',function(){
+    return view ('laporan.rekap');
+});
+
+
 
 
