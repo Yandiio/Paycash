@@ -62,7 +62,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="clearfix">
-                      <h4 class="card-title float-left">Visit And Sales Statistics</h4>
+                      <h4 class="card-title float-left">Statistik Pembayaran</h4>
                       <div id="visit-sale-chart-legend" class="rounded-legend legend-horizontal legend-top-right float-right"></div>                                     
                     </div>
                     <canvas id="visit-sale-chart" class="mt-4"></canvas>
@@ -72,7 +72,7 @@
               <div class="col-md-5 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Traffic Sources</h4>
+                    <h4 class="card-title">Rata - Rata Pemasukan</h4>
                     <canvas id="traffic-chart"></canvas>
                     <div id="traffic-chart-legend" class="rounded-legend legend-vertical legend-bottom-left pt-4"></div>                                                      
                   </div>
@@ -83,22 +83,22 @@
               <div class="col-12 grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Recent Tickets</h4>
+                    <h4 class="card-title">Riwayat Transaksi</h4>
                     <div class="table-responsive">
                       <table class="table">
                         <thead>
                           <tr>
                             <th>
-                              Assignee
+                              Atas nama
                             </th>
                             <th>
-                              Subject
+                              Alasan
                             </th>
                             <th>
                               Status
                             </th>
                             <th>
-                              Last Update
+                              Update Terakhir
                             </th>
                             <th>
                               Tracking ID
@@ -189,19 +189,19 @@
               <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Project Status</h4>
+                    <h4 class="card-title">Data Siswa</h4>
                     <div class="table-responsive">
                       <table class="table">
                         <thead>
                           <tr>
                             <th>
-                              #
+                              No
                             </th>
                             <th>
                               Name
                             </th>
                             <th>
-                              Due Date
+                              Kelas
                             </th>
                             <th>
                               Progress

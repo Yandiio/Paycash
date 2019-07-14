@@ -21,14 +21,14 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <!-- endinject -->
-    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="shortcut icon" href="{{asset('images/PayCash_logo.svg')}}" />
 </head>
 <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo" href="{{url('home')}}"><img src="{{asset('images/Paycash.png')}}" alt="logo" /></a>
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="" alt="logo" /></a>
+            <a class="navbar-brand brand-logo" href="{{url('home')}}"><img src="{{asset('images/PayCash_logo_text.svg')}}" alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('images/PayCash_logo.svg')}}" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
             <div class="search-field d-none d-md-block">
@@ -37,7 +37,7 @@
                         <div class="input-group-prepend bg-transparent">
                             <i class="input-group-text border-0 mdi mdi-magnify"></i>
                         </div>
-                        <input type="text" class="form-control bg-transparent border-0" placeholder="Search projects">
+                        <input type="text" class="form-control bg-transparent border-0" placeholder="Cari Disini">
                     </div>
                 </form>
             </div>
@@ -50,7 +50,7 @@
                             <span class="availability-status online"></span>
                         </div>
                         <div class="nav-profile-text">
-                            <p class="mb-1 text-black">David Greymaax</p>
+                            <p class="mb-1 text-black">Muhammad Yandi F</p>
                         </div>
                     </a>
                     <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
@@ -213,8 +213,8 @@
                             <!--change to offline or busy as needed-->
                         </div>
                         <div class="nav-profile-text d-flex flex-column">
-                            <span class="font-weight-bold mb-2">David Grey. H</span>
-                            <span class="text-secondary text-small">Project Manager</span>
+                            <span class="font-weight-bold mb-2"> Yandi Fenanda</span>
+                            <span class="text-secondary text-small">Admin</span>
                         </div>
                         <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
                     </a>
@@ -267,19 +267,20 @@
                     </a>
                     <div class="collapse" id="general">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" href="{{url('history')}}">Histori Pembayaran</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{url('history')}}">Riwayat Transaksi</a></li>
+                            <li class="nav-item"><a class="nav-link" href=""></a></li>
                             <li class="nav-item"> <a class="nav-link" href="{{url('recap')}}">Rekap Data</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/icons/mdi.html">
+                    <a class="nav-link" href="#">
                         <span class="menu-title">Pengaturan User</span>
                         <i class="mdi mdi-account-settings-variant menu-icon"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/icons/mdi.html">
+                    <a class="nav-link" href="#">
                         <span class="menu-title">Tentang</span>
                         <i class="mdi mdi-information-outline menu-icon"></i>
                     </a>
@@ -293,7 +294,7 @@
     <footer class="footer">
         <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019 <a
-                    href="https://www.bootstrapdash.com/" target="_blank">PayCash</a>. All rights
+                    href="" target="_blank">Nawasena</a>. All rights
                 reserved.</span>
             <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
                     class="mdi mdi-heart text-danger"></i></span>

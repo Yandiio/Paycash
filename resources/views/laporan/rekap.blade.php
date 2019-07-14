@@ -15,7 +15,7 @@
     <div class="col-lg-120 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Hoverable Table</h4>
+                  <h4 class="card-title">Rekap Data</h4>
                   <p class="card-description">
                     Add class <code>.table-hover</code>
                   </p>
