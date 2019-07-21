@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -28,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/main';
 
     /**
      * Create a new controller instance.
@@ -49,9 +48,16 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'id'             => ['required'],
+            'nama'           => ['required', 'string'],
+            'username'       => ['required', 'string', 'unique:users'],
+            'email'          => ['required', 'string', 'email', 'unique:users'],
+            'password'       => ['required', 'string', 'min:8', 'confirmed'],
+            'jenkel'         => ['required'],
+            'tempat_lahir'   => ['required', 'string'],
+            'tgl_lahir'      => ['required', 'date'],
+            'alamat'         => ['required', 'string'],
+            'status_pegawai' => ['required'],
         ]);
     }
 
@@ -64,9 +70,16 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'id'             => $data['id'],
+            'nama'           => $data['nama'],
+            'username'       => $data['username'],
+            'email'          => $data['email'],
+            'password'       => bcrypt($data['password']),
+            'jenkel'         => $data['jenkel'],
+            'tempat_lahir'   => $data['tempat_lahir'],
+            'tgl_lahir'      => $data['tgl_lahir'],
+            'alamat'         => $data['alamat'],
+            'status_pegawai' => $data['status_pegawai'],
         ]);
     }
 }
