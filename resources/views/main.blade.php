@@ -97,7 +97,7 @@
                             <th>
                               Status
                             </th>
-                            <th>
+                             <th>
                               Last Update
                             </th>
                             <th>
