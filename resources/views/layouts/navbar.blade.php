@@ -27,8 +27,10 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo" href="{{url('home')}}"><img src="{{asset('images/PayCash_logo_text.svg')}}" alt="logo" /></a>
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('images/PayCash_logo.svg')}}" alt="logo" /></a>
+            <a class="navbar-brand brand-logo" href="{{url('home')}}"><img
+                    src="{{asset('images/PayCash_logo_text.svg')}}" alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{asset('images/PayCash_logo.svg')}}"
+                    alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
             <div class="search-field d-none d-md-block">
@@ -59,9 +61,12 @@
                             Activity Log
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href=" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout').submit();">
                             <i class="mdi mdi-logout mr-2 text-primary"></i>
                             Sign out
+                            <form id="logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                            </form>
                         </a>
                     </div>
                 </li>
@@ -242,7 +247,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" href="#general-s" aria-expanded="false"
+                    <a class="nav-link" data-toggle="collapse" href="#general-s" aria-expanded="false"
                         aria-controls="general-s">
                         <span class="menu-title">Manage Data</span>
                         <i class="menu-arrow"></i>
@@ -267,7 +272,8 @@
                     </a>
                     <div class="collapse" id="general">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" href="{{url('history')}}">Riwayat Transaksi</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{url('history')}}">Riwayat Transaksi</a>
+                            </li>
                             <li class="nav-item"><a class="nav-link" href=""></a></li>
                             <li class="nav-item"> <a class="nav-link" href="{{url('recap')}}">Rekap Data</a></li>
                         </ul>
@@ -285,32 +291,32 @@
                         <i class="mdi mdi-information-outline menu-icon"></i>
                     </a>
                 </li>
-                  
-    </ul>
-    </nav>
 
-    @yield('content')
+            </ul>
+        </nav>
 
-    <footer class="footer">
-        <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019 <a
-                    href="" target="_blank">Nawasena</a>. All rights
-                reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
-                    class="mdi mdi-heart text-danger"></i></span>
-        </div>
-    </footer>
-</div>
+        @yield('content')
 
-<!-- plugins:js -->
-<script src="{{asset('vendors/js/vendor.bundle.base.js')}}"></script>
-<script src="{{asset('vendors/js/vendor.bundle.addons.js')}}"></script>
-<!-- endinject -->
-<!-- Plugin js for this page-->
-<!-- End plugin js for this page-->
-<!-- inject:js -->
-<script src="{{asset('js/off-canvas.js')}}"></script>
-<script src="{{asset('js/misc.js')}}"></script>
-<!-- endinject -->
-<!-- Custom js for this page-->
-<script src="{{asset('js/dashboard.js')}}"></script>
+        <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019 <a href=""
+                        target="_blank">Nawasena</a>. All rights
+                    reserved.</span>
+                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
+                        class="mdi mdi-heart text-danger"></i></span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- plugins:js -->
+    <script src="{{asset('vendors/js/vendor.bundle.base.js')}}"></script>
+    <script src="{{asset('vendors/js/vendor.bundle.addons.js')}}"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="{{asset('js/off-canvas.js')}}"></script>
+    <script src="{{asset('js/misc.js')}}"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="{{asset('js/dashboard.js')}}"></script>
