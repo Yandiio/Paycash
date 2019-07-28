@@ -9,7 +9,7 @@
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                       {{csrf_field()}}
 
                         <div class="form-group row">
                             <label for="id" class="col-md-4 col-form-label text-md-right">{{ __('NIP/NIK') }}</label>
@@ -124,7 +124,7 @@
                             <label for="tgl_lahir" class="col-md-4 col-form-label text-md-right">{{ __('Tanggal Lahir') }}</label>
 
                             <div class="col-md-6">
-                                <input id="tgl_lahir" type="date" placeholder="YYYY-MM-DD" class="form-control @error('tgl_lahir') is-invalid @enderror" name="tgl_lahir" value="{{ old('tgl_lahir') }}" required autocomplete="tgl_lahir" autofocus>
+                                <input id="tgl_lahir" type="date" placeholder="YYYY-MM-DD" class="form-control @error('tgl_lahir') is-invalid @enderror" name="tgl_lahir" value="{{ old('tgl_lahir') }}" required autocomplete="tgl_lahir">
 
                                 @error('tgl_lahir')
                                     <span class="invalid-feedback" role="alert">
