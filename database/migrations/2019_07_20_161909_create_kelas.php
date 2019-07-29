@@ -16,7 +16,8 @@ class CreateKelas extends Migration
         Schema::create('kelas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama_kelas');
-            $table->enum('tingkat_kelas', ['1', '2', '3']);
+            $table->enum('tingkat_kelas', ['10', '11', '12']);
+            $table->string('wali_kelas');
             $table->timestamps();
         });
     }
