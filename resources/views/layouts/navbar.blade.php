@@ -58,7 +58,7 @@
                     <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
                         <a class="dropdown-item" href="#">
                             <i class="mdi mdi-cached mr-2 text-success"></i>
-                            Activity Log
+                            Edit Profile
                         </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href=" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout').submit();">
@@ -188,11 +188,6 @@
                         <h6 class=asd"p-3 mb-0 text-center">See all notifications</h6>
                     </div>
                 </li>
-                <li class="nav-item nav-logout d-none d-lg-block">
-                    <a class="nav-link" href="#">
-                        <i class="mdi mdi-power"></i>
-                    </a>
-                </li>
                 <li class="nav-item nav-settings d-none d-lg-block">
                     <a class="nav-link" href="#">
                         <i class="mdi mdi-format-line-spacing"></i>
@@ -274,7 +269,7 @@
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item"><a class="nav-link" href="{{url('history')}}">Riwayat Transaksi</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href=""></a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href=""></a></li> -->
                             <li class="nav-item"> <a class="nav-link" href="{{url('recap')}}">Rekap Data</a></li>
                         </ul>
                     </div>
