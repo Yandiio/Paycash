@@ -3,6 +3,7 @@
 
 @section('title')
     <title>Kelola Data Kelas</title>
+
 @endsection
 
 @section('content')
@@ -59,9 +60,9 @@
                                             <i class="glyphicon glyphicon-plus"></i> Edit </button> 
                                         </a>
 
-                                        @method('DELETE')
-                                        @csrf
-                                        <a href="{{ url('/kelas/' . $row->id . '/hapus') }}">
+                                        {{method_field('delete')}}
+                                        {{csrf_field()}}
+                                        <a href="{{ url('/kelas/'.$row->id ) }}">
                                             <button type="button" class="btn btn-danger btn-sm"> 
                                             <i class="glyphicon glyphicon-plus"></i> Hapus </button> 
                                         </a>
@@ -74,8 +75,10 @@
                 </div>
             </div>
         </div>
-
+        
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @include('sweet::alert')
     @endsection
 </div>
 

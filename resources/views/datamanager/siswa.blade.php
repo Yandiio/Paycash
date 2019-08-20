@@ -1,6 +1,10 @@
 @extends('layouts.navbar')
 @section('content')
 
+<head>
+<link rel=”stylesheet” href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+</head>
+
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="page-header">

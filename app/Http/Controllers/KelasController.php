@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Kelas;
+use Alert;
 
 class KelasController extends Controller
 {
@@ -36,7 +37,8 @@ class KelasController extends Controller
         $status = $kelas->save();
 
             if($status) {
-                return redirect('/kelas')->with('success', 'Berhasil Ditambahkan');
+                alert()->success('Berhasil','Data berhasil ditambahkan');
+                return redirect('/kelas');
             } else {
                 return redirect('/kelas/tambah')->with('Gagal Ditambahkan');
             }
@@ -78,7 +80,8 @@ class KelasController extends Controller
         $status = $kelas->delete();
         
             if($status) {
-                return redirect('/kelas')->with('success', 'Berhasil Dihapus');
+                return redirect('/kelas');
+                Alert::success('Berhasil','data telah dihapus');
             } else {
                 return redirect('/kelas/tambah')->with('Gagal Dihapus');
             }

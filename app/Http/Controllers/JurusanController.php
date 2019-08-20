@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Jurusan;
+use Alert;
 
 class JurusanController extends Controller
 {
@@ -32,6 +33,7 @@ class JurusanController extends Controller
         $status = $jurusan->save();
 
             if($status) {
+                alert()->success('Success','Data berhasil Ditambahkan');
                 return redirect('/jurusan')->with('success', 'Berhasil Ditambahkan');
             } else {
                 return redirect('/jurusan/tambah')->with('Gagal Ditambahkan');

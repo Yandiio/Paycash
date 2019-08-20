@@ -4,6 +4,11 @@
 @section('title')
     <title> Kelola Data Jurusan </title>
 @endsection
+
+<head>
+    <link rel=”stylesheet” href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+</head>
+
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="page-header">
@@ -66,6 +71,8 @@
                     </table>
                 </div>
             </div>
+            <Script:src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></Script>
+            @include('sweet::alert')
         </div>
         @endsection
     </div>

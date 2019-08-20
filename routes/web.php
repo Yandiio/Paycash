@@ -28,14 +28,11 @@ Route::get('/mutasi',function(){
 Route::get('/siswa',function(){
     return view ('datamanager.siswa');
 });
-// Route::get('/jurusan',function(){
-//     return view ('datamanager.jurusan');
-// });
+
 Route::resource('/jurusan', 'JurusanController');
-// Route::get('/kelas',function(){
-//     return view ('datamanager.kelas');
-// });
+
 Route::resource('/kelas', 'KelasController');
+// Route::post('/kelas','KelasController@destroy');
 
 Route::get('/history',function(){
     return view ('laporan.history');
