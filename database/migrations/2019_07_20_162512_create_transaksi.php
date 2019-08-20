@@ -17,11 +17,8 @@ class CreateTransaksi extends Migration
             $table->increments('id');
             $table->datetime('tgl_transaksi');
             $table->bigInteger('user_id')->unsigned();
-            
             $table->integer('siswa_id')->unsigned();
-           
             $table->integer('pembayaran_id')->unsigned();
-          
             $table->integer('total_transaksi');
             $table->text('ket_transaksi');
             $table->timestamps();
