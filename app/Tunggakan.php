@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tunggakan extends Model
 {
+
+    protected $table = 'siswa';
+
     public function siswa() {
         return $this->belongsTo('App/Siswa');
     }

@@ -11,12 +11,12 @@ class JurusanController extends Controller
     public function index() 
     {
         $jurusan = Jurusan::all();
-        return view('datamanager.jurusan', compact('jurusan'));
+        return view('datamanager.Jurusan.jurusan', compact('jurusan'));
     }
 
     public function create() 
     {
-        return view('jurusan.tambah');
+        return view('datamanager.Jurusan.tambah');
     }
 
     public function store(Request $request) 
@@ -33,7 +33,7 @@ class JurusanController extends Controller
         $status = $jurusan->save();
 
             if($status) {
-                alert()->success('Success','Data berhasil Ditambahkan');
+                Alert::success('Success','Data berhasil Ditambahkan');
                 return redirect('/jurusan')->with('success', 'Berhasil Ditambahkan');
             } else {
                 return redirect('/jurusan/tambah')->with('Gagal Ditambahkan');

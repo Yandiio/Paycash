@@ -11,12 +11,12 @@ class KelasController extends Controller
     public function index() 
     {
         $kelas = Kelas::all();
-        return view('datamanager.kelas', compact('kelas'));
+        return view('datamanager.Kelas.kelas', compact('kelas'));
     }
 
     public function create() 
     {
-        return view('kelas.tambah');
+        return view('datamanager.Kelas.tambah');
     }
 
     public function store(Request $request) 
@@ -44,13 +44,18 @@ class KelasController extends Controller
             }
     }
 
+    public function show (Request $request,$id){
+        $kelas = Kelas::find($id);
+        return view('datamanager.Kelas.show',compact('kelas'));
+    }
+
     public function edit(Request $request, $id) 
     {
         $data['kelas'] = \DB::table('kelas')->find($id);
-        return view('kelas.tambah', $data);
+        return view('datamanager.Kelas.edit', $data);
     }
 
-    public function update() 
+    public function update(Request $request,$id) 
     {
         $rule = [
             'nama_kelas'    => 'required|string', 

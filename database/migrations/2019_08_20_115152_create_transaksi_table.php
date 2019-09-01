@@ -17,7 +17,7 @@ class CreateTransaksiTable extends Migration
             $table->increments('id');
             $table->datetime('tgl_transaksi');
             $table->integer('siswa_id')->unsigned();
-            $table->integer('pembayaran_id')->unsigned();
+            $table->foreign('siswa_id')->references('id')->on('siswa')->onDelete('cascade');
             $table->decimal('total_transaksi',20,2)->default(0);
             $table->string('ket_transaksi')->nullable();
             $table->string('status')->default('pending');

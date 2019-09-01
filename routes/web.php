@@ -19,20 +19,18 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('main');
 
-Route::get('/pembayaran',function(){
-    return view ('Admin.pembayaran');
+Route::get('/spp',function(){
+    return view ('Pembayaran.spp');
 });
-Route::get('/mutasi',function(){
-    return view ('Admin.mutasi');
+Route::get('/dsp',function(){
+    return view ('Pembayaran.dsp');
 });
-Route::get('/siswa',function(){
-    return view ('datamanager.siswa');
-});
+
+Route::resource('/siswa', 'SiswaController');
 
 Route::resource('/jurusan', 'JurusanController');
 
 Route::resource('/kelas', 'KelasController');
-// Route::post('/kelas','KelasController@destroy');
 
 Route::get('/history',function(){
     return view ('laporan.history');

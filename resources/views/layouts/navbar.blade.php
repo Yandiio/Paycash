@@ -61,7 +61,7 @@
                             Edit Profile
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href=" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout').submit();">
+                        <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout').submit();">
                             <i class="mdi mdi-logout mr-2 text-primary"></i>
                             Sign out
                             <form id="logout" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -185,7 +185,7 @@
                             </div>
                         </a>
                         <div class="dropdown-divider"></div>
-                        <h6 class=asd"p-3 mb-0 text-center">See all notifications</h6>
+                        <h6 class="p-3 mb-0 text-center">See all notifications</h6>
                     </div>
                 </li>
                 <li class="nav-item nav-settings d-none d-lg-block">
@@ -213,7 +213,7 @@
                             <!--change to offline or busy as needed-->
                         </div>
                         <div class="nav-profile-text d-flex flex-column">
-                            <span class="font-weight-bold mb-2"> Yandi Fenanda</span>
+                            <span class="font-weight-bold mb-2">Muhammad Yandi F</span>
                             <span class="text-secondary text-small">Admin</span>
                         </div>
                         <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
@@ -235,9 +235,9 @@
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item{{request()->is('pembayaran')}}"> <a class="nav-link"
-                                    href="{{url('pembayaran')}}">Pembayaran SPP</a></li>
+                                    href="{{url('spp')}}">Pembayaran SPP</a></li>
                             <li class="nav-item{{request()->is('mutasi')}}"> <a class="nav-link"
-                                    href="{{url('mutasi')}}">Pembayaran DSP</a></li>
+                                    href="{{url('dsp')}}">Pembayaran DSP</a></li>
                         </ul>
                     </div>
                 </li>
