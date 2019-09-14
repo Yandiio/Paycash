@@ -1,5 +1,7 @@
 @extends('layouts.navbar')
 @section('content')
+
+
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="page-header">
@@ -68,7 +70,7 @@
                           <div class="col-sm-4">
                             <div class="form-check">
                               <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked>
+                                <input type="radio" class="form-check-input" name="membershipRadios" id="Payment" value="" checked>
                                 Cash
                               </label>
                             </div>
@@ -76,7 +78,7 @@
                           <div class="col-sm-5">
                             <div class="form-check">
                               <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2">
+                                <input type="radio" class="form-check-input" name="membershipRadios" id="Payment2" value="option2">
                                 M-Banking
                               </label>
                             </div>

@@ -6,6 +6,8 @@
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{asset('vendors/iconfonts/mdi/css/materialdesignicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendors/css/vendor.bundle.base.css')}}">
+
+
     <!-- endinject -->
     <!-- inject:css -->
     <link rel="stylesh<!DOCTYPE html>
@@ -23,6 +25,7 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="{{asset('images/PayCash_logo.svg')}}" />
 </head>
+@yield('css')
 <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">

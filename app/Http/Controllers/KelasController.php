@@ -11,7 +11,7 @@ class KelasController extends Controller
     public function index() 
     {
         $kelas = Kelas::all();
-        return view('datamanager.Kelas.kelas', compact('kelas'));
+        return view('datamanager.Kelas.kelas')->with('kelas',$kelas);
     }
 
     public function create() 
@@ -81,12 +81,12 @@ class KelasController extends Controller
 
     public function destroy(Request $request, $id) 
     {
-        $kelas = \App\Kelas::find($id);
+        $kelas = \App\Kelas::findOrFail($id);
         $status = $kelas->delete();
         
             if($status) {
-                return redirect('/kelas');
                 Alert::success('Berhasil','data telah dihapus');
+                return redirect('/kelas');
             } else {
                 return redirect('/kelas/tambah')->with('Gagal Dihapus');
             }

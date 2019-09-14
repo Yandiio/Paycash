@@ -17,7 +17,7 @@
 <h1> Tambah Data Jurusan </h1>
 <form action="{{ url('jurusan') }}" method="POST">
     @csrf 
-
+    @method('POST')
         <div class="form-group">
             <label for="formGroupanama_jurusan"> Nama Jurusan </label> 
             <input type="text" name="nama_jurusan" id="formGroupanama_jurusan"  class="form-control" value="{{ old('nama_jurusan') }}"> 

@@ -21,6 +21,7 @@ class CreateSiswaTable extends Migration
             $table->integer('jurusan_id')->unsigned();
             $table->foreign('jurusan_id')->references('id')->on('jurusan')->onDelete('cascade');
             $table->string('thn_ajaran', 10);
+            $table->integer('foto');
             $table->string('tlp', 13);
             $table->timestamps();
         });

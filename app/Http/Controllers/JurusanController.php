@@ -11,12 +11,12 @@ class JurusanController extends Controller
     public function index() 
     {
         $jurusan = Jurusan::all();
-        return view('datamanager.Jurusan.jurusan', compact('jurusan'));
+        return view('datamanager.Jurusan.jurusan')->with('jurusan',$jurusan);
     }
 
     public function create() 
     {
-        return view('datamanager.Jurusan.tambah');
+        return view('datamanager.jurusan.tambah');
     }
 
     public function store(Request $request) 
@@ -43,20 +43,20 @@ class JurusanController extends Controller
     public function edit(Request $request, $id) 
     {
         $data['jurusan'] = \DB::table('jurusan')->find($id);
-        return view('jurusan.tambah', $data);
+        return view('datamanager.Jurusan.edit', $data);
     }
 
     public function update() 
     {
         $rule = [
-            'nama_jurusan'    => 'required|string', 
+            'nama_jurusan'    => 'required', 
         ];
         $this->validate($request, $rule);
 
         $input = $request->all();
 
-        $jurusan = \App\jurusan::find($id);
-        $jurusan->nama_jurusan      = $input['nama_jurusan'];
+        $jurusan = \App\Jurusan::find($id)->first();
+        $jurusan->nama_jurusan   = $input['nama_jurusan'];
         $status = $jurusan->update();
 
             if($status) {
@@ -66,9 +66,14 @@ class JurusanController extends Controller
             }
     }
 
+    public function show(){
+        $jurusan = Jurusan::all();
+        return view('datamanager.jurusan.show',compact('jurusan'));
+    }
+
     public function destroy(Request $request, $id) 
     {
-        $jurusan = \App\jurusan::find($id); 
+        $jurusan = \App\Jurusan::find($id)->first(); 
         $status = $jurusan->delete();
         
             if($status) {

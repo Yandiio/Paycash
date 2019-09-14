@@ -14,27 +14,28 @@
     </div>
 @endif
 
-<h1> Tambah Data Kelas </h1>
-<form action="{{ url('kelas') }}" method="PATCH">
+<h1> Edit Data Kelas </h1>
+<form action="{{ route('kelas.update',$kelas->id) }}" method="post">
     @csrf 
+    @method('PATCH')
 
         <div class="form-group">
             <label for="formGroupanama_kelas"> Nama Kelas </label> 
-            <input type="text" name="nama_kelas" id="formGroupanama_kelas"  class="form-control" value="{{ old('nama_kelas') }}"> 
+            <input type="text" name="nama_kelas" id="formGroupanama_kelas"  class="form-control" value="{{ $kelas->nama_kelas }}"> 
 	    </div>
 
         <div class="form-group">
 	        <label for="FormControltingkat_kelas"> Tingkat Kelas </label> 
 		        <select name="tingkat_kelas" id="FormControltingkat_kelas" class="form-control">
-			        <option value="10" {{ old('tingkat_kelas', @$kelas->tingkat_kelas) == '10' ? 'selected' : '' }} > 10 </option>
-			        <option value="11" {{ old('tingkat_kelas', @$kelas->tingkat_kelas) == '11' ? 'selected' : '' }} > 11 </option>
-			        <option value="12" {{ old('tingkat_kelas', @$kelas->tingkat_kelas) == '12' ? 'selected' : '' }} > 12 </option>
+			        <option value="10" {{ ($kelas->tingkat_kelas) == '10' ? 'selected' : '' }} > 10 </option>
+			        <option value="11" {{ ($kelas->tingkat_kelas) == '11' ? 'selected' : '' }} > 11 </option>
+			        <option value="12" {{ ($kelas->tingkat_kelas) == '12' ? 'selected' : '' }} > 12 </option>
 	            </select> 
         </div>
 
         <div class="form-group">
             <label for="formGroupawali_kelas"> Wali Kelas </label> 
-            <input type="text" name="wali_kelas" id="formGroupwali_kelas"  class="form-control" value="{{ old('wali_kelas') }}"> 
+            <input type="text" name="wali_kelas" id="formGroupwali_kelas"  class="form-control" value="{{ $kelas->wali_kelas }}"> 
 	    </div>	
 
         <div class="form-group">  

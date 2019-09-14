@@ -2,7 +2,7 @@
 @section('content')
 
 @section('title')
-    <title> Kelola Data Jurusan </title>
+<title> Kelola Data Jurusan </title>
 @endsection
 
 <head>
@@ -31,7 +31,7 @@
 
         <a href="{{url('jurusan/create') }}">
             <button type="button" class="btn btn-primary mt-3">
-            <i class="glyphicon glyphicon-plus"></i> Tambah Data Jurusan </button>
+                <i class="glyphicon glyphicon-plus"></i> Tambah Data Jurusan </button>
         </a>
 
         <div class="col-lg-120 grid-margin stretch-card">
@@ -43,26 +43,32 @@
                             <tr>
                                 <th> No </th>
                                 <th> Nama Jurusan </th>
-                                <th> Aksi  </th>
+                                <th> Aksi </th>
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach ($jurusan as $row)
+                            @foreach ($jurusan as $row)
                             <tr>
                                 <td> {{ isset($i) ? ++$i : $i = 1 }} </td>
                                 <td> {{ $row->nama_jurusan }} </td>
-                                <td> <form action="{{ url('/kelas', $row->id) }}" method="POST">
-                                        <a href="{{ url('/kelas/' . $row->id . '/edit') }}">
+                                <td>
+                                    <form action="{{ url('/jurusan', $row->id) }}" method="POST">
+                                        <a href="{{ url('/jurusan/' . $row->id . '/edit') }}">
                                             <button type="button" class="btn btn-warning btn-sm">
-                                            <i class="glyphicon glyphicon-plus"></i> Edit </button>
-                                        </a> 
-
-                                        @method('DELETE')
-                                        @csrf 
-                                        <a href="{{ url('/kelas/' . $row->id . '/hapus') }}">
-                                            <button type="button" class="btn btn-danger btn-sm">
-                                            <i class="glyphicon glyphicon-plus"></i> Hapus </button>
+                                                <i class="glyphicon glyphicon-plus"></i> Edit </button>
                                         </a>
+                                        
+                                        <a href="{{ url('/jurusan/'.$row->id)}}">
+                                            <button type="button" class="btn btn-primary btn-sm">Detail</button>
+                                        </a>
+                                    </form>
+
+
+                                    <form action="{{ url('/jurusan/'. $row->id) }}" method="POST">
+                                        @method('DELETE')
+                                        @csrf
+                                        <button type="submit" class="btn btn-danger btn-sm">
+                                            <i class="glyphicon glyphicon-plus"></i> Hapus </button>
                                     </form>
                                 </td>
                             </tr>
@@ -71,10 +77,5 @@
                     </table>
                 </div>
             </div>
-            <Script:src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></Script>
-            @include('sweet::alert')
-        </div>
-        @endsection
-    </div>
-   
-
+            <Script:src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"> </Script> @include('sweet::alert') </div>
+                @endsection </div>

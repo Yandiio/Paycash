@@ -17,6 +17,7 @@
 <h1> Tambah Data Kelas </h1>
 <form action="{{ url('kelas') }}" method="POST">
     @csrf 
+    @method('POST')
 
         <div class="form-group">
             <label for="formGroupanama_kelas"> Nama Kelas </label> 
