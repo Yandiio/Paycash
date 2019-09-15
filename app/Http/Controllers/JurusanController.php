@@ -10,7 +10,7 @@ class JurusanController extends Controller
 {
     public function index() 
     {
-        $jurusan = Jurusan::all();
+        $jurusan = Jurusan::paginate(5);
         return view('datamanager.Jurusan.jurusan')->with('jurusan',$jurusan);
     }
 

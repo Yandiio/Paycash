@@ -10,7 +10,7 @@ class KelasController extends Controller
 {
     public function index() 
     {
-        $kelas = Kelas::all();
+        $kelas = \App\Kelas::paginate(5);
         return view('datamanager.Kelas.kelas')->with('kelas',$kelas);
     }
 

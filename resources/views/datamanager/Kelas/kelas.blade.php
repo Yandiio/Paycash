@@ -76,7 +76,9 @@
                             </tr>
                             @endforeach
                         </tbody>
-                    </table>
+                    </table><br>
+                {{ $kelas->links() }}
+
                 </div>
             </div>
         </div>
