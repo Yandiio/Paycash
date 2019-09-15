@@ -238,9 +238,8 @@
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
                             <li class="nav-item{{request()->is('pembayaran')}}"> <a class="nav-link"
-                                    href="{{url('spp')}}">Pembayaran SPP</a></li>
-                            <li class="nav-item{{request()->is('mutasi')}}"> <a class="nav-link"
-                                    href="{{url('dsp')}}">Pembayaran DSP</a></li>
+                                    href="{{url('transaksi')}}">Transaksi SPP dan DSP</a>
+                            </li>
                         </ul>
                     </div>
                 </li>

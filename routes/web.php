@@ -19,12 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('main');
 
-Route::get('/spp',function(){
-    return view ('Pembayaran.spp');
+Route::get('/transaksi',function(){
+    return view ('Pembayaran.transaksi');
 });
-Route::get('/dsp',function(){
-    return view ('Pembayaran.dsp');
-});
+// Route::get('/dsp',function(){
+//     return view ('Pembayaran.dsp');
+// });
 
 Route::resource('/siswa', 'SiswaController');
 
