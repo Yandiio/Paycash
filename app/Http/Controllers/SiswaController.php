@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Siswa;
 use Illuminate\Http\Request;
+use Alert;
 
 class SiswaController extends Controller
 {
@@ -24,8 +25,9 @@ class SiswaController extends Controller
      */
     public function create()
     {
-        //
+        return view('datamanager.siswa.tambah');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +37,28 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rule = [
+            'nama' => 'required|string',
+            'kelas' => 'required|integer',
+            'foto ' => 'required|integer'
+        ];
+
+        $this->validate($request,$rule);
+
+        $input = $request->all();
+
+        $siswa = new \App\Siswa;
+        $siswa->nama = $input['nama'];
+        $siswa->kelas = $input['kelas'];
+        $siswa->jurusan = $input['jurusan'];
+        $status = $siswa->save();
+        
+        if($status){
+            Alert::success('');
+            return redirect('/siswa')->with('success');
+        }else{
+            return redirect('/siswa/tambah')->with('Data gagal Ditambah');
+        }
     }
 
     /**
@@ -46,7 +69,8 @@ class SiswaController extends Controller
      */
     public function show($id)
     {
-        //
+        $siswa = Siswa::all();
+        return view('datamanager.siswa.show',compact('siswa'));
     }
 
     /**

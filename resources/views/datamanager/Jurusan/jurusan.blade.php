@@ -62,8 +62,6 @@
                                             <button type="button" class="btn btn-primary btn-sm">Detail</button>
                                         </a>
                                     </form>
-
-
                                     <form action="{{ url('/jurusan/'. $row->id) }}" method="POST">
                                         @method('DELETE')
                                         @csrf
@@ -75,7 +73,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    {{$jurusan->links()}}
                 </div>
             </div>
             <Script:src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"> </Script> @include('sweet::alert') </div>
-                @endsection </div>
+ @endsection
+ </div>
