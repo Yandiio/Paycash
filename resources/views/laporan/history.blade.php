@@ -21,9 +21,13 @@
                   <table class="table table-hover">
                     <thead>
                       <tr>
-                        <th>User</th>
-                        <th>Product</th>
-                        <th>Sale</th>
+                        <th>No</th>
+                        <th>Pembayaran</th>
+                        <th>Nama Siswa</th>
+                        <th>Jumlah Pembayaran</th>
+                        <th>Tanggal Transaksi</th>
+                        <th>Keterangan</th>
+                        <th>Nama Petugas</th>
                         <th>Status</th>
                       </tr>
                     </thead>

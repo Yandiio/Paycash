@@ -15,13 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify'=>true]);
 
 Route::get('/home', 'HomeController@index')->name('main');
 
 Route::get('/transaksi',function(){
     return view ('Pembayaran.transaksi');
 });
+
+
+Route::get('/finish', function(){
+    return view('Pembayaran.transaksi');
+});
+
+Route::post('/notification/handler', 'DonationController@notificationHandler')->name('notification.handler');
 // Route::get('/dsp',function(){
 //     return view ('Pembayaran.dsp');
 // });

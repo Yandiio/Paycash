@@ -61,13 +61,17 @@
                                         <a href="{{ url('/jurusan/'.$row->id)}}">
                                             <button type="button" class="btn btn-primary btn-sm">Detail</button>
                                         </a>
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger btn-sm" type="submit">Hapus</button>
+                                        
                                     </form>
-                                    <form action="{{ url('/jurusan/'. $row->id) }}" method="POST">
+                                    <!-- <form action="{{ url('/jurusan/'. $row->id) }}" method="POST">
                                         @method('DELETE')
                                         @csrf
                                         <button type="submit" class="btn btn-danger btn-sm">
                                             <i class="glyphicon glyphicon-plus"></i> Hapus </button>
-                                    </form>
+                                    </form> -->
                                 </td>
                             </tr>
                             @endforeach
@@ -76,6 +80,8 @@
                     {{$jurusan->links()}}
                 </div>
             </div>
-            <Script:src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"> </Script> @include('sweet::alert') </div>
+            <Script:src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"> </Script>
+            @include('sweet::alert')
+        </div>
  @endsection
  </div>

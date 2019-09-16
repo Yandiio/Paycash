@@ -9,13 +9,13 @@
 </div>
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
-     @foreach($jurusan as $row)    
+ 
     <div class="form-group">
            
             <strong>Nama Jurusan: </strong>
-            {{$row->nama_jurusan}}
+            {{$jurusan->nama_jurusan}}
         </div>
-        @endforeach
+    
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">

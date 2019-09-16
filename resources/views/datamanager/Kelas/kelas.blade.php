@@ -66,12 +66,16 @@
                                             <button type="button" class="btn btn-primary btn-sm">
                                                 <i class="glyphicon glyphicon-plus"></i> Detail </button>
                                         </a>
+
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                     </form>
-                                    <form action="{{url('/kelas/'.$row->id)}}" method="POST">
+                                    <!-- <form action="{{url('/kelas/'.$row->id)}}" method="POST">
                                         @method('DELETE')    
                                         @csrf
                                         <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
-                                    </form>
+                                    </form> -->
                                 </td>
                             </tr>
                             @endforeach

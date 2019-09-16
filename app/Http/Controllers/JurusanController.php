@@ -53,9 +53,9 @@ class JurusanController extends Controller
         ];
         $this->validate($request, $rule);
 
-        $input = $request->all();
+        $input = $request->all()->first();
 
-        $jurusan = \App\Jurusan::find($id)->first();
+        $jurusan = \App\Jurusan::find($id);
         $jurusan->nama_jurusan   = $input['nama_jurusan'];
         $status = $jurusan->update();
 
@@ -66,17 +66,18 @@ class JurusanController extends Controller
             }
     }
 
-    public function show(){
-        $jurusan = Jurusan::all();
-        return view('datamanager.jurusan.show',compact('jurusan'));
+    public function show($id){
+        $jurusan = Jurusan::find($id)->first();
+        return view('datamanager.jurusan.show')->with('jurusan',$jurusan);
     }
 
     public function destroy(Request $request, $id) 
     {
-        $jurusan = \App\Jurusan::find($id)->first(); 
+        $jurusan = \App\Jurusan::find($id); 
         $status = $jurusan->delete();
         
             if($status) {
+                alert::success('Berhasil','Data telah Dihapus');
                 return redirect('/jurusan')->with('success', 'Berhasil Dihapus');
             } else {
                 return redirect('/jurusan/tambah')->with('Gagal Dihapus');

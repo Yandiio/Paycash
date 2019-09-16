@@ -28,7 +28,7 @@
                       <i class="mdi mdi-chart-line mdi-24px float-right"></i>
                     </h4>
                     <h2 class="mb-5">$ 15,0000</h2>
-                    <h6 class="card-text">Pembayaran Spp</h6>
+                    <h6 class="card-text">Pembayaran SPP & DSP</h6>
                   </div>
                 </div>
               </div>
@@ -49,10 +49,10 @@
                   <div class="card-body">
                     <img src="images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image"/>                                    
                     <h4 class="font-weight-normal mb-3">Jumlah Pengguna
-                      <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                      <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                     </h4>
-                    <h2 class="mb-5">95,5741</h2>
-                    <h6 class="card-text">Increased by 5%</h6>
+                    <h2 class="mb-5">{{Auth::user()->count()}}</h2>
+                    <h6 class="card-text">Sebagai Admin</h6>
                   </div>
                 </div>
               </div>

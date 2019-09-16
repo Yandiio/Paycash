@@ -6,10 +6,13 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 class RegisterController extends Controller
 {
+    Use Notifiable;
     /*
     |--------------------------------------------------------------------------
     | Register Controller
